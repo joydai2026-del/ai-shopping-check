@@ -1,0 +1,19 @@
+# Render Blueprint (https://render.com/docs/blueprint-spec).
+# NOTHING RUNS FROM THIS FILE until someone creates a Blueprint from it in the Render
+# dashboard. autoDeploy is off, so even then a deploy only happens on a manual click.
+services:
+  - type: web
+    name: ai-shopping-check
+    runtime: node
+    plan: free            # sleeps when idle; "starter" stays awake
+    autoDeploy: false
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: HOST
+        value: 0.0.0.0
+      - key: TRUST_PROXY_HOPS   # Render puts one proxy in front; rate limits stay per visitor
+        value: "1"

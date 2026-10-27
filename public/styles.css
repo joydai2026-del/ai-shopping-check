@@ -1,0 +1,66 @@
+:root {
+  --bg: #fbfaf7; --fg: #1d1d1f; --muted: #5f6368; --line: #e3e0d8; --card: #ffffff;
+  --accent: #1f5f4a; --accent-fg: #ffffff;
+  --ok: #1e7b3c; --okbg: #e7f5ec; --part: #8a5a00; --partbg: #fff4dc; --no: #b3261e; --nobg: #fde8e6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141517; --fg: #ececec; --muted: #a4a7ad; --line: #2e3034; --card: #1c1d20;
+    --accent: #5fc39b; --accent-fg: #0d1f18;
+    --ok: #6fd28e; --okbg: #17301f; --part: #f0c060; --partbg: #33290f; --no: #ff8a80; --nobg: #3a1a18;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 18px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Noto Sans SC", sans-serif;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 48px; }
+.eyebrow { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 8px; }
+h1 { font-size: clamp(28px, 6vw, 40px); line-height: 1.15; margin: 0 0 12px; }
+.lede { color: var(--muted); margin: 0 0 24px; }
+.scan-form label { display: block; font-weight: 600; margin-bottom: 6px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+input[type=text] {
+  flex: 1 1 240px; min-width: 0; font: inherit; padding: 14px 16px; border-radius: 12px;
+  border: 2px solid var(--line); background: var(--card); color: var(--fg);
+}
+input[type=text]:focus { outline: none; border-color: var(--accent); }
+button {
+  font: inherit; font-weight: 700; padding: 14px 22px; border-radius: 12px; border: 0;
+  background: var(--accent); color: var(--accent-fg); cursor: pointer; min-height: 52px;
+}
+button:disabled { opacity: .6; cursor: wait; }
+.row button { flex: 0 0 auto; }
+@media (max-width: 480px) { .row button { flex: 1 1 100%; } }
+.hint { color: var(--muted); font-size: 15px; margin: 8px 0 0; }
+.status { min-height: 1.5em; margin: 20px 0; font-weight: 600; }
+.status.error { color: var(--no); }
+.score-card { display: flex; gap: 20px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+.score-ring {
+  --pct: 0; --ring: var(--no);
+  flex: 0 0 auto; width: 104px; height: 104px; border-radius: 50%; display: grid; place-items: center;
+  background: conic-gradient(var(--ring) calc(var(--pct) * 1%), var(--line) 0);
+}
+.score-ring span { display: grid; place-items: center; width: 80px; height: 80px; border-radius: 50%; background: var(--card); font-size: 30px; font-weight: 800; }
+.score-ring.good { --ring: var(--ok); } .score-ring.ok { --ring: var(--part); } .score-ring.poor { --ring: var(--no); }
+.score-label { margin: 0; }
+.headline { margin: 4px 0; font-weight: 600; }
+.muted { color: var(--muted); }
+.small { font-size: 14px; }
+@media (max-width: 480px) { .score-card { flex-direction: column; text-align: center; } }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; margin: 20px 0 8px; font-size: 15px; color: var(--muted); }
+.dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.dot.pass { background: var(--ok); } .dot.warn { background: var(--part); } .dot.fail { background: var(--no); }
+.checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.item { background: var(--card); border: 1px solid var(--line); border-left-width: 6px; border-radius: 12px; padding: 14px 16px; }
+.item.pass { border-left-color: var(--ok); } .item.warn { border-left-color: var(--part); } .item.fail { border-left-color: var(--no); }
+.item h3 { font-size: 18px; margin: 0 0 4px; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.badge { font-size: 13px; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
+.badge.pass { background: var(--okbg); color: var(--ok); } .badge.warn { background: var(--partbg); color: var(--part); } .badge.fail { background: var(--nobg); color: var(--no); }
+.item p { margin: 4px 0; overflow-wrap: anywhere; }
+.item .why, .item .fix { font-size: 16px; }
+.item .label { font-weight: 700; }
+.foot { margin-top: 36px; }
+code { overflow-wrap: anywhere; }

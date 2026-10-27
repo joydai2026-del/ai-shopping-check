@@ -1,0 +1,22 @@
+{
+  "name": "ai-shopping-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Free scan: can AI shopping assistants read your Shopify or WooCommerce store?",
+  "homepage": "https://github.com/joydai2026-del/ai-shopping-check#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joydai2026-del/ai-shopping-check.git"
+  },
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node src/index.js",
+    "scan": "node src/cli.js",
+    "test": "node --test tests/*.test.js",
+    "test:browser": "node --test tests/browser/*.test.js",
+    "test:live": "LIVE_SMOKE=1 node --test tests/live-smoke.test.js",
+    "test:all": "node --test tests/*.test.js tests/browser/*.test.js"
+  },
+  "license": "MIT"
+}

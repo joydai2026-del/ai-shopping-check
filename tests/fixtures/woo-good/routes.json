@@ -1,0 +1,8 @@
+{
+  "/": "home.html",
+  "/robots.txt": "robots.txt",
+  "/wp-json/wc/store/v1/products": "store-api-products.json",
+  "/wp-sitemap.xml": "wp-sitemap.xml",
+  "/wp-sitemap-posts-product-1.xml": "wp-sitemap-posts-product-1.xml",
+  "/product/synthetic-candle/": "product-candle.html"
+}

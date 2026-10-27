@@ -1,0 +1,7 @@
+# Synthetic Test Shop
+
+> SYNTHETIC TEST FIXTURE. A pretend shop that sells mugs and tote bags.
+
+## Collections
+
+- [All products]({{ORIGIN}}/collections/all)

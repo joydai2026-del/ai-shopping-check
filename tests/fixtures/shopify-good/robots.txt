@@ -1,0 +1,6 @@
+# SYNTHETIC TEST FIXTURE
+User-agent: *
+Disallow: /admin
+Disallow: /cart
+Disallow: /checkout
+Sitemap: {{ORIGIN}}/sitemap.xml

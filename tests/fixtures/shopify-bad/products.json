@@ -1,0 +1,7 @@
+{
+  "_fixture_note": "SYNTHETIC TEST FIXTURE: not a real store",
+  "products": [
+    { "id": 9, "title": "Synthetic Plain Sock", "handle": "synthetic-plain-sock", "vendor": "",
+      "variants": [ { "id": 91, "sku": "", "barcode": null, "price": "5.00" } ] }
+  ]
+}

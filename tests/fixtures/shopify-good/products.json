@@ -1,0 +1,9 @@
+{
+  "_fixture_note": "SYNTHETIC TEST FIXTURE: not a real store",
+  "products": [
+    { "id": 1, "title": "Synthetic Blue Mug", "handle": "synthetic-blue-mug", "vendor": "Synthetic Test Shop",
+      "variants": [ { "id": 11, "sku": "SYN-MUG-BLUE", "barcode": "4006381333931", "price": "18.00", "available": true } ] },
+    { "id": 2, "title": "Synthetic Green Tote", "handle": "synthetic-green-tote", "vendor": "Synthetic Test Shop",
+      "variants": [ { "id": 21, "sku": "SYN-TOTE-GREEN", "barcode": "012345678905", "price": "24.00", "available": true } ] }
+  ]
+}

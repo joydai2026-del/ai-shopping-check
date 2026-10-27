@@ -1,0 +1,8 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.vault
+.DS_Store
+scratch/
+test-results/

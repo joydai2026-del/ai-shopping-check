@@ -1,0 +1,9 @@
+# SYNTHETIC TEST FIXTURE
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+User-agent: Google-Extended
+Disallow: /
+
+Sitemap: {{ORIGIN}}/wp-sitemap.xml

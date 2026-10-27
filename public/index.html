@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Shopping Check</title>
+  <meta name="description" content="Free check: can ChatGPT, Perplexity, Claude and Google AI read your Shopify or WooCommerce store?">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <p class="eyebrow">Free check for Shopify and WooCommerce stores</p>
+      <h1>Can AI shopping assistants see your products?</h1>
+      <p class="lede">More shoppers now ask ChatGPT, Perplexity, Claude or Google's AI what to buy. Type your store address and we will check, in about 20 seconds, whether those assistants can read your products.</p>
+    </header>
+
+    <form id="scan-form" class="scan-form" novalidate>
+      <label for="store-url">Your store address</label>
+      <div class="row">
+        <input id="store-url" name="url" type="text" inputmode="url" autocomplete="url" placeholder="mystore.com" required>
+        <button id="scan-btn" type="submit">Check my store</button>
+      </div>
+      <p class="hint">We only look at public pages, the same ones any visitor can see. Nothing is changed on your store.</p>
+    </form>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <section id="results" class="results" hidden>
+      <div class="score-card">
+        <div id="score-ring" class="score-ring" aria-hidden="true"><span id="score-num">0</span></div>
+        <div>
+          <p class="score-label">Your score: <strong id="score-text">0 out of 100</strong></p>
+          <p id="headline" class="headline"></p>
+          <p id="store-line" class="muted"></p>
+        </div>
+      </div>
+
+      <div class="legend" aria-hidden="true">
+        <span><i class="dot pass"></i>Good</span>
+        <span><i class="dot warn"></i>Could be better</span>
+        <span><i class="dot fail"></i>Needs fixing</span>
+      </div>
+
+      <ol id="checklist" class="checklist"></ol>
+
+    </section>
+
+    <footer class="foot">
+      <p class="muted small">For developers and AI agents: send <code>POST /api/scan</code> with <code>{"url": "mystore.com"}</code> to get the same report as JSON.</p>
+    </footer>
+  </main>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC TEST FIXTURE -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{ORIGIN}}/</loc></url>
+  <url><loc>{{ORIGIN}}/products/synthetic-blue-mug</loc></url>
+  <url><loc>{{ORIGIN}}/products/synthetic-green-tote</loc></url>
+</urlset>

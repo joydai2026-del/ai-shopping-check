@@ -1,0 +1,13 @@
+# SYNTHETIC TEST FIXTURE
+User-agent: *
+Disallow: /admin
+
+User-agent: OAI-SearchBot
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Claude-SearchBot
+Disallow: /products/
+
+User-agent: GPTBot
+Disallow: /

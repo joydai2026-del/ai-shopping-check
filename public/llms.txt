@@ -1,0 +1,11 @@
+# AI Shopping Check
+
+> A free scan that tells a Shopify or WooCommerce store owner whether AI shopping assistants can read their products. Returns a 0-100 score and a pass/warn/fail checklist.
+
+Agents can call the scan directly. Send `POST /api/scan` with JSON `{"url": "mystore.com"}`. The response is JSON with `score`, `grade`, `headline`, and `checks` (each with `id`, `status`, `detail`, `why`, `fix`).
+
+## API
+
+- [Scan a store](/api/scan): POST, JSON in and out
+- [Health](/api/health): GET, returns `{"ok": true}` when the server is up
+- [Source code (MIT)](https://github.com/joydai2026-del/ai-shopping-check): run your own copy with Node 22, `npm start`

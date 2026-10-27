@@ -1,0 +1,6 @@
+{
+  "/": "home.html",
+  "/robots.txt": "robots.txt",
+  "/products.json": "products.json",
+  "/products/synthetic-plain-sock": "product-plain-sock.html"
+}

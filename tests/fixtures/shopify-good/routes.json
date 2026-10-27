@@ -1,0 +1,11 @@
+{
+  "/": "home.html",
+  "/robots.txt": "robots.txt",
+  "/llms.txt": "llms.txt",
+  "/sitemap.xml": "sitemap.xml",
+  "/sitemap_products_1.xml": "sitemap_products_1.xml",
+  "/products.json": "products.json",
+  "/products/synthetic-blue-mug.json": "product-blue-mug.json",
+  "/products/synthetic-blue-mug": "product-blue-mug.html",
+  "/products/synthetic-green-tote": "product-green-tote.html"
+}

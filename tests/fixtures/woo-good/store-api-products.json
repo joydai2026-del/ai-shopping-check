@@ -1,0 +1,5 @@
+[
+  { "_fixture_note": "SYNTHETIC TEST FIXTURE: not a real store",
+    "id": 101, "name": "Synthetic Candle", "permalink": "{{ORIGIN}}/product/synthetic-candle/", "sku": "SYN-CANDLE",
+    "prices": { "price": "1500", "currency_code": "USD", "currency_minor_unit": 2 }, "is_in_stock": true }
+]
